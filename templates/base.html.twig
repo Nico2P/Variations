@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>{% block title %}Variations{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('schedule-template-master/assets/css/style.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/80ffe4b3da.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+    {% endblock %}
+</head>
+
+<body class="container">
+<nav class="navbar navbar-light navbar-expand-lg navbar-bg container">
+    <a class="navbar-brand" href="{{ path('app_homepage') }}">
+        <img class="col-12" id="logo_head" src="{{ asset('images/variations.png') }}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a  class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    L'association
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item" href="/association">Bureau</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/association">Comité D'administation</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/association">Equipe Pédagogique</a>
+                </div>
+            </li>
+            <!--
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Prestations
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="/disciplines">Evènementiel</a>
+                    <a class="dropdown-item" href="/teambuilding">Team Building</a>
+                    <a class="dropdown-item" href="/decoration">Décoration / Façade</a>
+                </div>
+            </li>
+            -->
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Disciplines</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="nav-item dropright">
+                        <a class="dropdown-item dropdown-toggle" href="/disciplines" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">4-18ans</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li class="dropdown-item"><a href="/disciplines#navbarNavDropdown">Toutes</a></li>
+                            <li class="dropdown-item"><a href="/disciplines#live">Classique</a></li>
+                            <li class="dropdown-item"><a href="/disciplines#light">Modern</a></li>
+                            <li class="dropdown-item"><a href="/disciplines#custo">Hiphop</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" href="/disciplines" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">13-18ans</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                            <li class="dropdown-item"><a href="/disciplines#navbarNavDropdown">Toutes</a></li>
+                            <li class="dropdown-item"><a href="/disciplines#live">Classique</a></li>
+                            <li class="dropdown-item"><a href="/disciplines#light">Modern</a></li>
+                            <li class="dropdown-item"><a href="/disciplines#custo">Hiphop</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+            </li>
+
+            <li class="nav-item">
+                <a  class="nav-link" href="/planning">Planning des cours</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="/tarifs_inscription">Tarifs et Inscription</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="/presse">Nos Projets et partenaires</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="/contact">Contact</a>
+            </li>
+        </ul>
+        <!--
+        <div class="ml-4 mr-2">
+            <p class="rounded-pill pill-nav mt-3 p-2 d-flex"><i class="fas fa-phone p-1"></i>01XXXXXXXX</p>
+        </div>
+        <div class="ml-4 mr-2">
+            <a href="/contact"><p class="rounded-pill pill-nav background-bleu  text-white mt-3 p-2 d-flex">Contact</p></a>
+        </div>
+        -->
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!-- FOOTER -->
+<footer class="container mt-5 p-5">
+    <p class="float-right"><a href="#">Back to top</a></p>
+
+    <!-- Footer Links -->
+    <div class="container-fluid row text-center text-md-left">
+
+        <!-- Grid row -->
+
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-12 mt-md-0 mt-3">
+
+            <!-- Content -->
+            <img src="{{ asset('images/variations.png') }}">
+            <p>Complexe</p>
+            <p>95320 Saint prix, France</p>
+            <p><a href="mailto:variations@contact.com">variations@contact.com</a></p>
+            <p>06 XX XX XX XX</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h4 class="text-uppercase">Cours</h4>
+
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/disciplines">Cours 1</a>
+                </li>
+                <li>
+                    <a href="/teambuilding">Cours 2</a>
+                </li>
+                <li>
+                    <a href="/decoration">Cours 3</a>
+                </li>
+            </ul>
+
+
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h4 class="text-uppercase">SUIVEZ-NOUS</h4>
+
+            <ul class="list-unstyled">
+                <li>
+                    <a href="https://www.facebook.com/maquisartshop/">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/maquis_art/">Instagram</a>
+                </li>
+            </ul>
+
+            <!-- Links -->
+            <h4 class="text-uppercase" style="margin-top: 1.6em !important; ">CONTACT</h4>
+
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/maquisartshop/">
+                    <i class="fab fa-facebook-f"> </i>
+                </a>
+        </ul>
+        <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+</footer>
+</main>
+
+
+
+
+{% block javascripts %}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
+
+<script src="{{ asset('schedule-template-master/assets/js/util.js') }}"></script>
+<script src="{{ asset('schedule-template-master/assets/js/main.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script>
+
+
+
+    $(document).ready(function(){
+
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+
+
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
+    });
+
+
+
+
+
+    (function($){
+        $('.dropdown-menu a.dropdown-toggle').on('mouseover', function(e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+
+            return false;
+        });
+    })(jQuery)
+
+
+</script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - L'Agence{% endblock %}
+
+{% block body %}
+<main role="main">
+    <!-- Section: Team v.3 -->
+    <section class="team-section my-1">
+
+        <!-- Section heading -->
+        <h2 class="h1-responsive font-weight-bold text-center my-2 text-uppercase">l'équipe</h2>
+        <!-- Section description -->
+        <p class="grey-text text-center w-responsive mx-auto mb-5">blablabla</p>
+
+        <!-- Grid row-->
+        <div class="row text-center text-md-left">
+
+            <!-- Grid column -->
+            <div class="col-xl-12 col-lg-12 mb-5 d-md-flex justify-content-between">
+                <div class="avatar mb-md-0 mb-4 col-lg-4 col-12">
+                    <img src="{{ asset('images/variations.png') }}" class="rounded z-depth-1 w-100" alt="Sample avatar">
+                </div>
+                <div class="col-lg-8 col-12">
+                    <h4 class="font-weight-bold mb-3"><strong>Contact 1</strong></h4>
+                    <h6 class="font-weight-bold grey-text mb-3">« Surnom »</h6>
+                    <p class="grey-text text-justify">Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.</p>
+                </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-xl-12 col-lg-12 mb-5 d-md-flex justify-content-between">
+                <div class="avatar mb-md-0 mb-4 col-lg-4 col-12">
+                    <img src="{{ asset('images/variations.png') }}" class="rounded z-depth-1 w-100 h-100" alt="Sample avatar">
+                </div>
+                <div class="col-lg-8 col-12">
+                    <h4 class="font-weight-bold mb-3"><strong>Contact 2</strong></h4>
+                    <h6 class="font-weight-bold grey-text mb-3">« surnom »</h6>
+                    <p class="grey-text text-justify">Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae.</p>
+
+
+{#                    <!-- Facebook-->
+                    <a class="p-2 fa-lg fb-ic">
+                        <i class="fab fa-facebook-f"> </i>
+                    </a>
+                    <!--YouTube -->
+                    <a class="p-2 fa-lg yt-ic">
+                        <i class="fab fa-youtube"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="p-2 fa-lg ins-ic">
+                        <i class="fab fa-instagram"> </i>
+                    </a>
+                    #}
+                </div>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+
+
+    </section>
+    <!-- Section: Team v.3 -->
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
